@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import Typewriter from 'typewriter-effect';
+import "./Main.css"
+
 
 const useMouse = () => {
     const [mousePosition, setPosition] = useState({x : null, y : null})
@@ -29,8 +31,9 @@ const Main = () => {
                     <ContainerItems>
                         <MainH1 mouseX={x} mouseY={y}>
                         <Typewriter
+                            wrapperClassName ="john"
                             onInit={(typewriter) => {
-                                typewriter.typeString('{ Dylan Kroft }')
+                                typewriter.typeString('<strong>{ Dylan Kroft } </strong>')
                                 .start();
                             }}
                             />
