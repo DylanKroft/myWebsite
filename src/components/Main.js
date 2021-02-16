@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
-import TypeWriterEffect from 'react-typewriter-effect'
+import Typewriter from 'typewriter-effect';
 
 const useMouse = () => {
     const [mousePosition, setPosition] = useState({x : null, y : null})
@@ -28,14 +28,12 @@ const Main = () => {
                 <ContainerContent>
                     <ContainerItems>
                         <MainH1 mouseX={x} mouseY={y}>
-                        <TypeWriterEffect
-                            textStyle={{ 'font-size': 'clamp(4rem, 6vw, 4rem)'}}
-                            startDelay={100}
-                            cursorColor="white"
-                            text="{ Dylan Kroft }"
-                            typeSpeed={125}
-                            hideCursorAfterText="true"
-                        />
+                        <Typewriter
+                            onInit={(typewriter) => {
+                                typewriter.typeString('{ Dylan Kroft }')
+                                .start();
+                            }}
+                            />
                         </MainH1>
                         <MainH2 mouseX={x} mouseY={y}>Currently studying compter science and design at the University of Sydney. I love good design and building simple, intuitive, and elegant user experiences.</MainH2>
                             
