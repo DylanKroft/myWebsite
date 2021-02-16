@@ -1,11 +1,12 @@
-import React from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import styled from 'styled-components'
 import TypeWriterEffect from 'react-typewriter-effect'
 import useMouse from '@react-hook/mouse-position'
+import ReactDOM from "react-dom";
 
 const Main = () => {
 
-    const ref = React.useRef(null)
+    const ref = useRef(null)
     const mouse = useMouse(ref, {
     enterDelay: 100,
     leaveDelay: 100,
@@ -25,9 +26,9 @@ const Main = () => {
                             typeSpeed={125}
                             hideCursorAfterText="true"
                         />
-                            </MainH1>
-                        <MainH2 mouseX={mouse.x} mouseY={mouse.y}>Currently studying compter science and design at the University of Sydney. 
-                            I love good design and building simple, intuitive, and elegant user experiences.</MainH2>
+                        </MainH1>
+                        <MainH2 mouseX={mouse.x} mouseY={mouse.y}>Currently studying compter science and design at the University of Sydney. I love good design and building simple, intuitive, and elegant user experiences.</MainH2>
+                            
                     </ContainerItems>
                 </ContainerContent>  
             </Container>
@@ -86,7 +87,6 @@ const MainH1 = styled.div`
 
 `
 const MainH2 = styled.div`
-    font-family: Montserrat;
     padding-top: 2rem;
     font-size: clamp(1.2rem, 2vw, 1.2rem);
     text-align: left;

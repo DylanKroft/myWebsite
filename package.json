@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@loadable/component": "^5.14.1",
+    "@loadable/server": "^5.14.2",
     "@react-hook/mouse-position": "^4.1.0",
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^2.32.3",
@@ -18,8 +20,8 @@
     "gatsby-source-filesystem": "^2.11.0",
     "gatsby-transformer-sharp": "^2.12.0",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
     "react-rotating-text": "^1.4.1",
@@ -27,6 +29,8 @@
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
+    "@loadable/babel-plugin": "^5.13.2",
+    "@loadable/webpack-plugin": "^5.14.2",
     "prettier": "2.2.1"
   },
   "keywords": [
