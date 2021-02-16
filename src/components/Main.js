@@ -93,7 +93,7 @@ const MainH1 = styled.div`
     margin-left: auto;
     text-align: left;
     width: 100%;
-    background: radial-gradient(200px 100px at calc(${props => props.mouseX -1}px - 1.5em) calc(${props => props.mouseY - 0}px - 4.25em), #12c2e9, #c471ed, white);
+    background: radial-gradient(300px 200px at calc(${props => props.mouseX -1}px - 1.5em) calc(${props => props.mouseY - 0}px - 4.25em), #12c2e9, #c471ed, white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -109,7 +109,7 @@ const MainH2 = styled.div`
     font-weight: 200;
     letter-spacing: 0.005em;
     font-weight: 200;
-    background: radial-gradient(200px 100px at calc(${props => props.mouseX -1}px - 6em) calc(${props => props.mouseY - 0}px - 18em), #12c2e9, #c471ed, white);
+    background: radial-gradient(300px 200px at calc(${props => props.mouseX -1}px - 6em) calc(${props => props.mouseY - 0}px - 18em), #12c2e9, #c471ed, white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 `
