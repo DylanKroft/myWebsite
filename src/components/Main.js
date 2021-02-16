@@ -1,23 +1,33 @@
-import React, {useState, useEffect, useRef} from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import TypeWriterEffect from 'react-typewriter-effect'
-import useMouse from '@react-hook/mouse-position'
-import ReactDOM from "react-dom";
+
+const useMouse = () => {
+    const [mousePosition, setPosition] = useState({x : null, y : null})
+
+    useEffect(() => {
+        function handle(e) {
+            setPosition({
+                x: e.pageX,
+                y: e.pageY
+            });
+        }
+        document.addEventListener("mousemove", handle);
+        return () => document.removeEventListener("mousemove", handle);
+    })
+    return mousePosition;
+}
 
 const Main = () => {
 
-    const ref = useRef(null)
-    const mouse = useMouse(ref, {
-    enterDelay: 100,
-    leaveDelay: 100,
-  })
+    const {x, y} = useMouse();
     
     return (
         <div>
-            <Container ref={ref}>
+            <Container>
                 <ContainerContent>
                     <ContainerItems>
-                        <MainH1 mouseX={mouse.x} mouseY={mouse.y}>
+                        <MainH1 mouseX={x} mouseY={y}>
                         <TypeWriterEffect
                             textStyle={{ 'font-size': 'clamp(4rem, 6vw, 4rem)'}}
                             startDelay={100}
@@ -27,7 +37,7 @@ const Main = () => {
                             hideCursorAfterText="true"
                         />
                         </MainH1>
-                        <MainH2 mouseX={mouse.x} mouseY={mouse.y}>Currently studying compter science and design at the University of Sydney. I love good design and building simple, intuitive, and elegant user experiences.</MainH2>
+                        <MainH2 mouseX={x} mouseY={y}>Currently studying compter science and design at the University of Sydney. I love good design and building simple, intuitive, and elegant user experiences.</MainH2>
                             
                     </ContainerItems>
                 </ContainerContent>  
@@ -40,6 +50,7 @@ const Main = () => {
 }
 
 export default Main
+
 
 
 const Container = styled.div`

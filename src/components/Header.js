@@ -2,8 +2,7 @@ import {Link} from "gatsby"
 import React from "react"
 import styled from 'styled-components'
 import { FaBars } from 'react-icons/fa'
-import { menuData} from "../data/MenuData"
-import { Button } from "./Button"
+import { menuData } from "../data/MenuData"
 
 const Header = () => {
     return (
@@ -17,7 +16,6 @@ const Header = () => {
                     </NavLink>
                 ))}
             </NavMenu>
-            
         </Nav>    
     )
 }
@@ -67,18 +65,6 @@ const NavMenu = styled.div`
     align-items: center;
 
     @media screen and (max-width: 768px) {
-        display: none;
-    }
-`
-
-const NavBtn = styled.div`
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    margin-right: 24px;
-
-    @media screen and (max-width: 768px) {
-        background-color: transparent;
         display: none;
     }
 `

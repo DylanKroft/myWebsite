@@ -1,19 +1,15 @@
 import React from "react"
 import { GlobalStyle } from "./styles/GlobalStyles" 
-import Header from "../components/Header"
+import Header from "./Header"
 import Main from "./Main"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
     <>
     <GlobalStyle />
     <Header />
     <Main />
-    
-    
-    
-    <main>{children}</main>
     </>
   )
 }

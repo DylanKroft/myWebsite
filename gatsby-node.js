@@ -8,7 +8,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
                 use: loaders.null(),
             }, 
             {
-                test: /@react-hook/,
+                test: /@react-hook\/mouse-position/,
                 use: loaders.null(),
             }
           ],
