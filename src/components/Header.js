@@ -82,9 +82,11 @@ const NavMenu = styled.div`
     background-color: transparent;
     display: flex;
     align-items: center;
-    background: radial-gradient(100px 50px at calc(${props => props.mouseX -1}px - 45em) calc(${props => props.mouseY - 0}px + 0.5em), #12c2e9, #c471ed, white);
+    background: radial-gradient(100px 50px at calc(${props => props.mouseX -0}px - 4em) calc(${props => props.mouseY - 0}px + 0.5em), #12c2e9, #c471ed, white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    width: 100%;
+    justify-content:flex-end;
     
 
     @media screen and (max-width: 768px) {

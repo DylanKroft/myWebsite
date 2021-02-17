@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import Typewriter from 'typewriter-effect';
 import "./Main.css"
+import FadeIn from 'react-fade-in'
 
 
 const useMouse = () => {
@@ -31,15 +32,25 @@ const Main = () => {
                     <ContainerItems>
                         <MainH1 mouseX={x} mouseY={y}>
                         <Typewriter
-                            wrapperClassName ="john"
                             onInit={(typewriter) => {
                                 typewriter.typeString('<strong>{ Dylan Kroft } </strong>')
                                 .start();
                             }}
                             />
                         </MainH1>
-                        <MainH2 mouseX={x} mouseY={y}>Currently studying compter science and design at the University of Sydney. I love good design and building simple, intuitive, and elegant user experiences.</MainH2>
-                            
+                        <FadeIn
+                            delay="1000"
+                            transitionDuration="500"
+                        >
+                            <MainH2 
+                                mouseX={x} 
+                                mouseY={y}
+                            >
+                                <span className="subtitle">Currently studying compter science and design at the University of Sydney. 
+                                I love good design and building simple, intuitive, and elegant user experiences.
+                                </span>
+                            </MainH2>
+                        </FadeIn> 
                     </ContainerItems>
                 </ContainerContent>  
             </Container>
@@ -109,9 +120,12 @@ const MainH2 = styled.div`
     font-weight: 200;
     letter-spacing: 0.005em;
     font-weight: 200;
+    font-size: 1em;
     background: radial-gradient(300px 200px at calc(${props => props.mouseX -1}px - 6em) calc(${props => props.mouseY - 0}px - 18em), #12c2e9, #c471ed, white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    opacity: 1;
+    transition: opacity 3s;
 `
 
 const Container2 = styled.div`
