@@ -1,15 +1,15 @@
-import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import Typewriter from 'typewriter-effect';
 import "./Main.css"
 import FadeIn from 'react-fade-in'
-
+import Contact from "./Contact"
+import React, {useState, useEffect} from 'react'
 
 const useMouse = () => {
     const [mousePosition, setPosition] = useState({x : null, y : null})
 
     useEffect(() => {
-        function handle(e) {
+        function handle(e) { 
             setPosition({
                 x: e.pageX,
                 y: e.pageY
@@ -40,7 +40,7 @@ const Main = () => {
                         </MainH1>
                         <FadeIn
                             delay="1000"
-                            transitionDuration="500"
+                            transitionDuration="1000"
                         >
                             <MainH2 
                                 mouseX={x} 
@@ -54,7 +54,9 @@ const Main = () => {
                     </ContainerItems>
                 </ContainerContent>  
             </Container>
-            <Container2></Container2>
+            <Container2>
+            </Container2>
+            <Contact />
 
 
         </div>
@@ -77,7 +79,7 @@ const Container = styled.div`
 `
 
 const ContainerContent = styled.div`
-    z-index: 100;
+    z-index: 80;
     height: calc(100vh - 80px);
     max-height: 100%;
     text-align: left;
@@ -98,9 +100,9 @@ const ContainerItems = styled.div`
 `
 
 const MainH1 = styled.div`
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    font-size: clamp(4rem, 6vw, 4rem);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    font-size: clamp(4.75rem, 7vw, 4.75rem);
     margin-left: auto;
     text-align: left;
     width: 100%;
@@ -114,7 +116,7 @@ const MainH2 = styled.div`
     font-size: clamp(1.2rem, 2vw, 1.2rem);
     text-align: left;
     width: 40em;
-    z-index: 100;
+    z-index: 80;
     max-width: 80vw;
     line-height: 1.8;
     font-weight: 200;

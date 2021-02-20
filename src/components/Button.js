@@ -1,25 +1,45 @@
-import styled from "styled-components"
-import {Link} from 'gatsby'
+import React, {useState} from 'react'
+import styled from 'styled-components'
+import { Divide as Hamburger } from 'hamburger-react'
+import "./Button.css"
 
-export const Button = styled(Link)`
-    background: ${({primary}) => (primary ? '#F26A2E' : '#077BF1')};
-    white-space: nowrap;
+
+const Button = ({onClick}) => {
+
+    const [isOpen, setOpen] = useState(false)
+
+    return (
+        <But>
+            <button
+                onClick={onClick}
+                className="myButton"
+            >
+            <Hamburger 
+                rounded
+                onClick={onClick}
+                size={32}
+            />
+            </button>
+        </But>
+    )
+}
+
+export default Button
+
+const But = styled.div`
+    background-color: transparent;
+    display:none;
     color: #fff;
-    padding: ${({ big }) => (big ? '20px' : '16px')};  
-    font-size: ${({ big }) => (big ? '20px' : '16px')};   
-    outline: none;
-    border: none;
-    min-width: 100px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: 0.3s !important;
-    border-radius: ${({ round }) => (round ? '50px' : 'none')};
 
-    &:hover {
-        background: ${({ primary }) => (primary ? "#077BF1" : "#F26A2E")};
-        transform: translateY(-2px);
+    @media screen and (max-width: 768px) {
+        background-color: none;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 50%);
+        cursor: pointer;
+        z-index:1000
     }
-
-
- 
 `
+

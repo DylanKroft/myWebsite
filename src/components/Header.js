@@ -1,11 +1,11 @@
 import {Link} from "gatsby"
 import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
-import { FaBars } from 'react-icons/fa'
 import { menuData } from "../data/MenuData"
+import Button from "./Button"
 
 const useMouse = () => {
-    const [mousePosition, setPosition] = useState({x : null, y : null})
+    const [mousePosition, setPosition] = useState({x : null, y : null});
 
     useEffect(() => {
         function handle(e) {
@@ -20,14 +20,17 @@ const useMouse = () => {
     return mousePosition;
 }
 
-const Header = () => {
-
+const Header = ({onAdd}) => {
     const {x, y} = useMouse();
+
+    const onClick = () => {
+        console.log("hi")
+    }
 
     return (
         <Nav>
             <NavLink to="/"></NavLink>
-            <Bars />
+            <Button onClick={onAdd}/>
             <NavMenu mouseX={x} mouseY={y}>
                 {menuData.map((item, index) => (
                     <NavLink to={item.link} key={index}>
@@ -45,7 +48,7 @@ const Nav = styled.nav`
     background-color: transparent;
     display: flex;
     justify-content: space-between;
-    z-index: 5;
+    z-index: 105;
     position: relative;
     line-height: 1.8;
     font-weight: 200;
@@ -62,22 +65,7 @@ const NavLink = styled(Link)`
     cursor: pointer;
     text-decoration: none;
 `   
-const Bars = styled(FaBars)`
-    background-color: transparent;
-    display:none;
-    color: #fff;
 
-    @media screen and (max-width: 768px) {
-        background-color: transparent;
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-100%, 75%);
-        font-size: 1.8rem;
-        cursor: pointer;
-    }
-`
 const NavMenu = styled.div`
     background-color: transparent;
     display: flex;
