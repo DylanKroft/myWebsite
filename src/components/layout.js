@@ -3,12 +3,11 @@ import Header from "./Header"
 import Main from "./Main"
 import "./layout.css"
 import Dropdown from "./Dropdown"
-import React, {useState} from 'react'
-
+import React, {useState, useLayoutEffect} from 'react'
 const Layout = () => {
 
   const [showDropdown, setShowDropdown] = useState(false);
-
+  
   return (
     <>
     <GlobalStyle />

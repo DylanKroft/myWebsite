@@ -34,10 +34,10 @@ const But = styled.div`
     @media screen and (max-width: 768px) {
         background-color: none;
         display: block;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
-        transform: translate(-100%, 50%);
+        transform: translate(-50%, 25%);
         cursor: pointer;
         z-index:1000
     }

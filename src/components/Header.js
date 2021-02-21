@@ -48,12 +48,13 @@ const Nav = styled.nav`
     background-color: transparent;
     display: flex;
     justify-content: space-between;
-    z-index: 105;
+    z-index: 505;
     position: relative;
     line-height: 1.8;
     font-weight: 200;
     letter-spacing: 0.01em;
     height: 80px;
+    width: 100%;
 `
 const NavLink = styled(Link)`
     background-color: transparent;
