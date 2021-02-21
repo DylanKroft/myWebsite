@@ -1,0 +1,35 @@
+import React from "react"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import styled from "styled-components";
+
+const PortfolioPage = () => (
+<>
+<Top/>
+<Layout>
+    <SEO title="Portfolio" />
+</Layout>
+<Body />
+
+</>
+  
+)
+
+export default PortfolioPage
+
+const Top = styled.div`
+    height: 80px;
+    background-color: #070912;    
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+`
+
+const Body = styled.div`
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+`
