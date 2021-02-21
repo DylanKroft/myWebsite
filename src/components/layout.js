@@ -3,11 +3,13 @@ import Header from "./Header"
 import Main from "./Main"
 import "./layout.css"
 import Dropdown from "./Dropdown"
-import React, {useState, useLayoutEffect} from 'react'
+import React, {useState} from 'react'
+
+
 const Layout = () => {
 
   const [showDropdown, setShowDropdown] = useState(false);
-  
+
   return (
     <>
     <GlobalStyle />
@@ -17,6 +19,5 @@ const Layout = () => {
     </>
   )
 }
-
 
 export default Layout

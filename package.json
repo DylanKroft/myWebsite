@@ -9,6 +9,7 @@
     "@emotion/react": "^11.1.5",
     "@loadable/component": "^5.14.1",
     "@loadable/server": "^5.14.2",
+    "@n8tb1t/use-scroll-position": "^2.0.3",
     "@react-hook/mouse-position": "^4.1.0",
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^2.32.3",

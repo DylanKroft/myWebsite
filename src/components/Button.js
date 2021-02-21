@@ -9,9 +9,12 @@ const Button = ({onClick}) => {
     const [isOpen, setOpen] = useState(false)
 
     return (
-        <But>
+        <But isOpen={isOpen}>
             <button
-                onClick={onClick}
+                onClick={() => {
+                    onClick()
+                    setOpen(!isOpen)
+                }}
                 className="myButton"
             >
             <Hamburger 
@@ -34,12 +37,18 @@ const But = styled.div`
     @media screen and (max-width: 768px) {
         background-color: none;
         display: block;
-        position: fixed;
+        position: absolute;
         top: 0;
         right: 0;
         transform: translate(-50%, 25%);
         cursor: pointer;
-        z-index:1000
+        z-index:1000;
+
+
+        ${({ isOpen }) => isOpen && `
+            position: fixed;
+        `}
     }
+
 `
 

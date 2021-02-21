@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { menuData } from "../data/MenuData"
 import Button from "./Button"
 import "./Header.css"
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 const useMouse = () => {
     const [mousePosition, setPosition] = useState({x : null, y : null});
@@ -21,21 +22,30 @@ const useMouse = () => {
     return mousePosition;
 }
 
-const Header = ({onAdd}) => {
+const Header = ({onAdd, isOpen}) => {
     const {x, y} = useMouse();
+    const [showTop, setshowTop] = useState(false);
 
-    const onClick = () => {
-        console.log("hi")
+    function vhToPixels (vh) {
+        return Math.round(window.innerHeight / (100 / vh));
     }
 
     return (
-        <Nav>
+        <Nav showTop={showTop}>
+
+        { useScrollPosition(({ prevPos, currPos }) => {
+            if (Math.abs(currPos.y) > (vhToPixels(100)  - 85)) {
+                setshowTop(true)
+            }  else {
+            setshowTop(false)
+            }})}
+
             <NavLink to="/"></NavLink>
-            <Button onClick={onAdd}/>
+            <Button onClick={onAdd} opened={isOpen}/>
             <NavMenu mouseX={x} mouseY={y}>
                 {menuData.map((item, index) => (
                     <NavLink to={item.link} key={index}>
-                        <span class="navItems">
+                        <span className="navItems">
                         {item.title}
                         </span>
                     </NavLink>
@@ -51,13 +61,20 @@ const Nav = styled.nav`
     background-color: transparent;
     display: flex;
     justify-content: space-between;
-    z-index: 505;
-    position: relative;
+    position: absolute;
     line-height: 1.8;
     font-weight: 300;
     letter-spacing: 0.01em;
     height: 80px;
     width: 100%;
+    top: 0;
+    z-index: 100;
+
+    ${({ showTop }) => showTop && `
+    position: fixed;
+    background-color: #070912;
+    background-image: none;
+  `}
 `
 const NavLink = styled(Link)`
     background-color: transparent;

@@ -19,5 +19,5 @@ const Container = styled.div`
     position: relative;
     display: flex;
     justify-content: flex-start;
-    background-color: lightgrey;
+    background-color: #070912;
 `

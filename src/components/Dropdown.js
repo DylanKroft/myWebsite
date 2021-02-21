@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { menuData } from "../data/MenuData"
 import {Link} from "gatsby"
 
@@ -53,10 +53,10 @@ const NavLink = styled(Link)`
     justify-content: center; 
     align-items: center;
     height: 80px;
-    background-color: #0D1224;
+    background-color: #070912;
 
     :hover {
-    background: rgb(18,194,233);
+    background-color: white;
     background: -moz-linear-gradient(90deg, rgba(18,194,233,1) 34%, rgba(196,113,237,1) 49%, rgba(246,79,89,1) 64%);
     background: -webkit-linear-gradient(90deg, rgba(18,194,233,1) 34%, rgba(196,113,237,1) 49%, rgba(246,79,89,1) 64%);
     background: linear-gradient(90deg, rgba(18,194,233,1) 34%, rgba(196,113,237,1) 49%, rgba(246,79,89,1) 64%);
@@ -69,5 +69,5 @@ const NavLink = styled(Link)`
 
 const Buffer = styled.div`
     height: 80px;
-    background-color: #0D1224;
+    background-color: #070912;
 `
