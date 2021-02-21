@@ -32,15 +32,18 @@ const Main = () => {
                     <ContainerItems>
                         <MainH1 mouseX={x} mouseY={y}>
                         <Typewriter
+                            options={{
+                                delay: 60,
+                              }}
                             onInit={(typewriter) => {
-                                typewriter.typeString('<strong>{ Dylan Kroft } </strong>')
-                                .start();
+                                typewriter.typeString('<strong>{<span class="buf">|</span>Dylan Kroft<span class="buf">|</span>}</strong>')
+                                .start()
                             }}
                             />
                         </MainH1>
                         <FadeIn
                             delay="1000"
-                            transitionDuration="1000"
+                            transitionDuration="1250"
                         >
                             <MainH2 
                                 mouseX={x} 
@@ -121,7 +124,6 @@ const MainH2 = styled.div`
     line-height: 1.8;
     font-weight: 200;
     letter-spacing: 0.005em;
-    font-weight: 200;
     font-size: 1em;
     background: radial-gradient(300px 200px at calc(${props => props.mouseX -1}px - 6em) calc(${props => props.mouseY - 0}px - 18em), #12c2e9, #c471ed, white);
     -webkit-background-clip: text;

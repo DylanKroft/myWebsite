@@ -36,12 +36,12 @@ const Ddown = styled.div`
         z-index: 90;
         display: flex;
         flex-direction: column;
-        background-color: #070912;
-        border-bottom: 3px solid #FAA613;
+        background-color: #0D1224;
         -webkit-box-shadow: 0px 3px 13px 3px #070912; 
         box-shadow: 0px 3px 13px 3px #070912;
-        font-weight: 200;
+        font-weight: 300;
         font-size: 1.75em;
+
     }
 
 `
@@ -53,11 +53,21 @@ const NavLink = styled(Link)`
     justify-content: center; 
     align-items: center;
     height: 80px;
-    background-color: #070912;
+    background-color: #0D1224;
+
+    :hover {
+    background: rgb(18,194,233);
+    background: -moz-linear-gradient(90deg, rgba(18,194,233,1) 34%, rgba(196,113,237,1) 49%, rgba(246,79,89,1) 64%);
+    background: -webkit-linear-gradient(90deg, rgba(18,194,233,1) 34%, rgba(196,113,237,1) 49%, rgba(246,79,89,1) 64%);
+    background: linear-gradient(90deg, rgba(18,194,233,1) 34%, rgba(196,113,237,1) 49%, rgba(246,79,89,1) 64%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#12c2e9",endColorstr="#f64f59",GradientType=1);    transition: background-color 500ms linear;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
 
 `   
 
 const Buffer = styled.div`
     height: 80px;
-    background-color: #070912;
+    background-color: #0D1224;
 `

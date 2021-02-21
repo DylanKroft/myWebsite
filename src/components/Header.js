@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import { menuData } from "../data/MenuData"
 import Button from "./Button"
+import "./Header.css"
 
 const useMouse = () => {
     const [mousePosition, setPosition] = useState({x : null, y : null});
@@ -34,7 +35,9 @@ const Header = ({onAdd}) => {
             <NavMenu mouseX={x} mouseY={y}>
                 {menuData.map((item, index) => (
                     <NavLink to={item.link} key={index}>
+                        <span class="navItems">
                         {item.title}
+                        </span>
                     </NavLink>
                 ))}
             </NavMenu>
@@ -51,7 +54,7 @@ const Nav = styled.nav`
     z-index: 505;
     position: relative;
     line-height: 1.8;
-    font-weight: 200;
+    font-weight: 300;
     letter-spacing: 0.01em;
     height: 80px;
     width: 100%;
@@ -61,10 +64,16 @@ const NavLink = styled(Link)`
     color: #fff;
     display: flex;
     align-items: center;
-    padding: 0 2rem;
-    height: 100%;
     cursor: pointer;
     text-decoration: none;
+    letter-spacing: 1px; 
+    margin: 0rem 4rem 0rem 0rem;
+
+
+    :hover {
+        -webkit-text-stroke: 1.25px transparent; 
+        -webkit-background-clip: text;
+         }
 `   
 
 const NavMenu = styled.div`
@@ -76,6 +85,7 @@ const NavMenu = styled.div`
     -webkit-text-fill-color: transparent;
     width: 100%;
     justify-content:flex-end;
+
     
 
     @media screen and (max-width: 768px) {
