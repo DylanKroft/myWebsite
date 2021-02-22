@@ -3,6 +3,7 @@ import Typewriter from 'typewriter-effect';
 import "./Main.css"
 import FadeIn from 'react-fade-in'
 import React, {useState, useEffect} from 'react'
+import Footer from './Footer';
 
 const useMouse = () => {
     const [mousePosition, setPosition] = useState({x : null, y : null})
@@ -54,8 +55,8 @@ const Main = () => {
                 </ContainerContent>  
             </Container>
             <Container2>
+            <Footer />
             </Container2>
-
         </div>
     )
 }

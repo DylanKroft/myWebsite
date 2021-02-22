@@ -3,7 +3,6 @@ import Header from "./Header"
 import Dropdown from "./Dropdown"
 import React, {useState} from 'react'
 
-
 const Layout = ({fluid}) => {
 
   const [showDropdown, setShowDropdown] = useState(false);

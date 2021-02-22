@@ -33,5 +33,13 @@ export const portfolioData = [
         body: "A simple timer I made to try out neomorphism.",
         github: "https://github.com/DylanKroft/neoTimer",
         demo: "https://neotimer.netlify.app/"
+    },
+
+    {
+        title: "Invadem",
+        date: "Nov 2019",
+        pic: "invadem.png",
+        body: "Space Invaders clone written in Java for an introduction to OOP course.",
+        github: "https://github.com/DylanKroft/invadem",
     }
 ]

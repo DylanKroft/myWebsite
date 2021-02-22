@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import styled from "styled-components";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PortfolioGrid from "../components/PortfolioGrid"
+import Footer from "../components/Footer";
 
 const PortfolioPage = () => (
 <>
@@ -13,6 +14,7 @@ const PortfolioPage = () => (
 </Layout>
 <Body>
   <PortfolioGrid />
+  <Footer/>
 </Body>
 </>
   
@@ -38,4 +40,5 @@ const Body = styled.div`
     padding-top: 40px;
     left: 0px;
     min-height: 100vh;
+    padding-bottom: calc(40px + 10vh);
 `
