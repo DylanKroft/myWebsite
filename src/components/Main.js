@@ -44,10 +44,7 @@ const Main = () => {
                             delay="1000"
                             transitionDuration="1250"
                         >
-                            <MainH2 
-                                mouseX={x} 
-                                mouseY={y}
-                            >
+                            <MainH2 mouseX={x} mouseY={y}>
                                 <span className="subtitle">Currently studying compter science and design at the University of Sydney. 
                                 I love good design and building simple, intuitive, and elegant user experiences.
                                 </span>
@@ -105,14 +102,14 @@ const MainH1 = styled.div`
     margin-left: auto;
     text-align: left;
     width: 100%;
-    background: radial-gradient(300px 200px at calc(${props => props.mouseX -1}px - 1.5em) calc(${props => props.mouseY - 0}px - 4.25em), #12c2e9, #c471ed, white);
+    background: radial-gradient(300px 200px at calc(${props => props.mouseX -1}px - 1.5em) calc(${props => props.mouseY - 0}px - 4em), #12c2e9, #c471ed, white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
 `
 const MainH2 = styled.div`
     padding-top: 2rem;
-    font-size: clamp(1.2rem, 2vw, 1.2rem);
+    font-size: clamp(1rem, 2vw, 1rem);
     text-align: left;
     width: 40em;
     z-index: 80;
@@ -120,7 +117,6 @@ const MainH2 = styled.div`
     line-height: 1.8;
     font-weight: 200;
     letter-spacing: 0.005em;
-    font-size: 1em;
     background: radial-gradient(300px 200px at calc(${props => props.mouseX -1}px - 6em) calc(${props => props.mouseY - 0}px - 18em), #12c2e9, #c471ed, white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

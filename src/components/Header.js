@@ -3,7 +3,6 @@ import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import { menuData } from "../data/MenuData"
 import Button from "./Button"
-import "./Header.css"
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 const useMouse = () => {
@@ -42,12 +41,12 @@ const Header = ({onAdd, isOpen, fluid}) => {
 
             <NavLink to="/"></NavLink>
             <Button onClick={onAdd} opened={isOpen}/>
-            <NavMenu mouseX={x} mouseY={y}>
+            <NavMenu>
                 {menuData.map((item, index) => (
-                    <NavLink to={item.link} key={index}>
-                        <span className="navItems">
-                        {item.title}
-                        </span>
+                    <NavLink to={item.link} key={index} mouseX={x} mouseY={y}>
+                            <Links mouseX={x} mouseY={y} to={item.link} key={index}>
+                             {item.title}
+                            </Links>
                     </NavLink>
                 ))}
             </NavMenu>
@@ -58,7 +57,6 @@ const Header = ({onAdd, isOpen, fluid}) => {
 export default Header
 
 const Nav = styled.nav`
-    background-color: transparent;
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -69,13 +67,11 @@ const Nav = styled.nav`
     width: 100%;
     top: 0;
     z-index: 100;
-
     ${({ showTop }) => showTop && `
     position: fixed;
     background-color: #070912;
     background-image: none;
   `}
-
     ${({ fluid }) => !fluid && `
         position: fixed;
         background-color: #070912;
@@ -83,7 +79,6 @@ const Nav = styled.nav`
     `}
     `
 const NavLink = styled(Link)`
-    background-color: transparent;
     color: #fff;
     display: flex;
     align-items: center;
@@ -92,26 +87,33 @@ const NavLink = styled(Link)`
     letter-spacing: 1px; 
     margin: 0rem 4rem 0rem 0rem;
 
-
     :hover {
-        -webkit-text-stroke: 1.25px transparent; 
+        text-decoration: none;
         -webkit-background-clip: text;
          }
 `   
 
 const NavMenu = styled.div`
-    background-color: transparent;
     display: flex;
     align-items: center;
-    background: radial-gradient(100px 50px at calc(${props => props.mouseX -0}px - 4em) calc(${props => props.mouseY - 0}px + 0.5em), #12c2e9, #c471ed, white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     width: 100%;
     justify-content:flex-end;
-
     
-
     @media screen and (max-width: 768px) {
         display: none;
     }
+`
+
+const Links = styled.div`
+    z-index: 80;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    transition: opacity 3s;
+
+    :hover {
+        background: linear-gradient(90deg, rgba(18,194,233,1) 0%, rgba(196,113,237,1) 100%);
+        -webkit-background-clip: text;
+         }
 `
