@@ -22,13 +22,16 @@ export const PortfolioData = [
         date: "Jul 2020",
         pic: "binchicken.png",
         body: "An endless-run style game I made as part of my learning the basics of Javascript.",
-        demo: "http://54.66.66.255/"
+        demo: "https://binchickenrun.netlify.app/",
+        github: "https://github.com/DylanKroft/binChickenRun"
     },
 
     {
         title: "NeoTimer",
         date: "June 2020",
         pic: "neotimer.png",
-        body: "A simple timer I made to try out neomorphism."
+        body: "A simple timer I made to try out neomorphism.",
+        github: "https://github.com/DylanKroft/neoTimer",
+        demo: "https://neotimer.netlify.app/"
     }
 ]
