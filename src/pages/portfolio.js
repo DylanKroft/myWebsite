@@ -16,12 +16,19 @@ const PortfolioPage = () => (
 <Body>
 <Container>
   <Row className="text-center">
-    {PortfolioData.map((item, index) => (
+    {PortfolioData.map((item, index, body, github, demo, explore, date) => (
     <Col md={6} lg={6}>
-      <p>
+      <p         
+      style={{height:"100%", paddingBottom: "25px"}}
+    >
         <Cards 
           title={item.title}
           pic={item.pic}
+          body={item.body}
+          github={item.github}
+          demo={item.demo}
+          explore={item.explore}
+          date={item.date}
         />
       </p>
     </Col>
@@ -51,14 +58,7 @@ const Body = styled.div`
     background-color: white;
     position: absolute;
     top: 80px;
-    padding-top: 20px;
+    padding-top: 40px;
     left: 0px;
+    min-height: 100vh;
 `
-
-const Box = styled.div`
-    height: 100%;
-    width: 100%;
-    background-color: gray;
-    border: 1px solid green;
-`
-

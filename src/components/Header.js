@@ -67,15 +67,23 @@ const Nav = styled.nav`
     width: 100%;
     top: 0;
     z-index: 100;
+
     ${({ showTop }) => showTop && `
-    position: fixed;
-    background-color: #070912;
-    background-image: none;
-  `}
+        position: fixed;
+        background-color: #070912;
+        background-image: none;
+        -webkit-box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.7);
+        -moz-box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.7);
+        box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.7);
+    `}
+
     ${({ fluid }) => !fluid && `
         position: fixed;
         background-color: #070912;
         background-image: none;
+        -webkit-box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.7);
+        -moz-box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.7);
+        box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.7);
     `}
     `
 const NavLink = styled(Link)`
