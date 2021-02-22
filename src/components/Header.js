@@ -22,7 +22,7 @@ const useMouse = () => {
     return mousePosition;
 }
 
-const Header = ({onAdd, isOpen}) => {
+const Header = ({onAdd, isOpen, fluid}) => {
     const {x, y} = useMouse();
     const [showTop, setshowTop] = useState(false);
 
@@ -31,10 +31,10 @@ const Header = ({onAdd, isOpen}) => {
     }
 
     return (
-        <Nav showTop={showTop}>
+        <Nav showTop={showTop} fluid={fluid}>
 
         { useScrollPosition(({ prevPos, currPos }) => {
-            if (Math.abs(currPos.y) > (vhToPixels(100)  - 85)) {
+            if ((Math.abs(currPos.y) > (vhToPixels(100)  - 85)) && fluid) {
                 setshowTop(true)
             }  else {
             setshowTop(false)
@@ -75,7 +75,13 @@ const Nav = styled.nav`
     background-color: #070912;
     background-image: none;
   `}
-`
+
+    ${({ fluid }) => !fluid && `
+        position: fixed;
+        background-color: #070912;
+        background-image: none;
+    `}
+    `
 const NavLink = styled(Link)`
     background-color: transparent;
     color: #fff;

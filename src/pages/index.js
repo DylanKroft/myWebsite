@@ -5,12 +5,12 @@ import Main from "../components/Main"
 
 
 const IndexPage = () => (
-  <>
-  <Layout>
+  <div>
+    <Main />
+  <Layout fluid={true}>
     <SEO title="Home" />
   </Layout>
-  <Main />
-  </>
+  </div>
 
 )
 

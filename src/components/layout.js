@@ -1,18 +1,17 @@
 import { GlobalStyle } from "./styles/GlobalStyles" 
 import Header from "./Header"
-import "./layout.css"
 import Dropdown from "./Dropdown"
 import React, {useState} from 'react'
 
 
-const Layout = () => {
+const Layout = ({fluid}) => {
 
   const [showDropdown, setShowDropdown] = useState(false);
 
   return (
     <>
     <GlobalStyle />
-    <Header onAdd={() => setShowDropdown(!showDropdown)}/>
+    <Header fluid={fluid} onAdd={() => setShowDropdown(!showDropdown)}/>
     {showDropdown && <Dropdown/>}
     </>
   )

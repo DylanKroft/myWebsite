@@ -8,5 +8,9 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         color: white;
     }
+
+    html {
+        background-color: #12c2e9;
+    }
 }
 `

@@ -1,0 +1,30 @@
+.card {
+    width: 100% !important;
+    border-radius: 0px !important;
+    text-align: left;
+}
+
+.card-text{
+    color: black;
+}
+
+.cardTitle{
+    color: black;
+    font-size: 1.25em !important;
+    padding: 20px;
+    padding-bottom: 0px;
+    margin: 0px !important;
+}
+
+.cardImg {
+    border-radius: 0px !important;
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .cardImg {
+        height: 60vw;
+    }
+}

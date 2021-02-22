@@ -99,7 +99,7 @@ const ContainerItems = styled.div`
 `
 
 const MainH1 = styled.div`
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 0.03em;
     font-size: clamp(4.75rem, 7vw, 4.75rem);
     margin-left: auto;
