@@ -1,4 +1,4 @@
-export const PortfolioData = [
+export const portfolioData = [
     {
         title: "Personal Portfolio", 
         date: "Feb 2021",
