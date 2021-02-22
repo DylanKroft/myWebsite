@@ -2,7 +2,7 @@ import React from "react"
 import Cards from "../components/Cards"
 import { Container, Row, Col } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {portfolioData} from "../data/portfolioData"
+import {portfolioData} from "../data/PortfolioData"
 const PortfolioGrid = () => {
     return (
         <Container>
