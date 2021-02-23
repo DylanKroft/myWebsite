@@ -4,7 +4,8 @@ head = "export const photos = ["
 tail = "];"
 
 for filename in os.listdir("static/photos"):
-    head += "\n{\nsrc: 'photos/%s',\nwidth: 1,\nheight: 1},\n" % filename
+    if filename != ".DS_Store":
+        head += "\n{\nsrc: 'photos/%s',\nwidth: 1,\nheight: 1},\n" % filename
 
 head += tail
 

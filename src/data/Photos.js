@@ -20,11 +20,6 @@ width: 1,
 height: 1},
 
 {
-src: 'photos/.DS_Store',
-width: 1,
-height: 1},
-
-{
 src: 'photos/IMG_1582.jpeg',
 width: 1,
 height: 1},
