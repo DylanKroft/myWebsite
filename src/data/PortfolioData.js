@@ -21,7 +21,7 @@ export const portfolioData = [
         title: "Bin Chicken Run",
         date: "Jul 2020",
         pic: "binchicken.png",
-        body: "An endless-run style game I made as part of my learning the basics of Javascript.",
+        body: "An endless-run style game I made as part of my learning the basics of JavaScript.",
         demo: "https://binchickenrun.netlify.app/",
         github: "https://github.com/DylanKroft/binChickenRun"
     },

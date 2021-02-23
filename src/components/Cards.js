@@ -17,7 +17,7 @@ const Cards = ({title, pic, body, github, demo, explore, date}) => {
             </Card.Text>
                 <ul>
                     {github && <li className="item">
-                        <Button className="btn" id="gH"><a href={github}><AiFillGithub/><span>&nbsp;</span>Github</a></Button>
+                        <Button className="btn" id="gH"><a href={github}><AiFillGithub/><span>&nbsp;</span>GitHub</a></Button>
                     </li>}
                     {demo && <li className="item">
                         <Button className="btn" id="demo"><a href={demo}><AiFillExperiment/><span>&nbsp;</span>Demo</a></Button>
