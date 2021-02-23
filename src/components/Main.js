@@ -4,6 +4,8 @@ import "./Main.css"
 import FadeIn from 'react-fade-in'
 import React, {useState, useEffect} from 'react'
 import Footer from './Footer';
+import PortfolioGrid from "../components/PortfolioGrid"
+import {Link} from "gatsby"
 
 const useMouse = () => {
     const [mousePosition, setPosition] = useState({x : null, y : null})
@@ -56,6 +58,8 @@ const Main = () => {
             </Container>
             <Container2>
                 <h3 className="sub">Recent Projects</h3>
+                <Link to="/portfolio"><h3 class="viewMore">view more</h3></Link>
+                <PortfolioGrid preview={true}/>
             <Footer />
             </Container2>
         </div>
@@ -129,9 +133,11 @@ const MainH2 = styled.div`
 const Container2 = styled.div`
     width: 100%;
     margin-top: 10px;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     display: flex;
+    flex-direction:column;
     justify-content: flex-start;
     background-color: white;
+    padding-bottom:60px;
 `

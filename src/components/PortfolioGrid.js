@@ -3,11 +3,18 @@ import Cards from "../components/Cards"
 import { Container, Row, Col } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {portfolioData} from "../data/PortfolioData"
-const PortfolioGrid = () => {
+const PortfolioGrid = ({preview}) => {
+    
+    let data = portfolioData;
+
+    if (preview) {
+        data = portfolioData.slice(0,2);
+    } 
+    
     return (
         <Container>
-        <Row className="text-center">
-            {portfolioData.map((item, index, body, github, demo, explore, date) => (
+        <Row className="text-left">
+            {data.map((item, preview) => (
             <Col md={6} lg={6}>
             <p         
             style={{height:"100%", paddingBottom: "25px"}}

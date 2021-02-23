@@ -16,6 +16,12 @@
     color: #070912;
     font-size: 2.5em;
     margin: 40px;
-    margin-left: 50px;
+    margin: 40px 0px 0px 40px;
     font-weight: 600;
+}
+
+.viewMore {
+    color: #676b7e;
+    font-size: 1em;
+    margin: 0px 0px 40px 40px;
 }

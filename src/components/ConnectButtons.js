@@ -6,7 +6,7 @@ import {Link} from "gatsby"
 import {IconContext} from "react-icons";
 
 
-const Footer = () => {
+const ConnectButtons = () => {
     return (
         <>
         <Container>
@@ -34,15 +34,13 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export default ConnectButtons
 
 const Container = styled.div`
-    width: 100%;
+    width: 50%;
     height: 60px;
-    position: absolute;
+    position: relative;
     display: flex;
-    font-size: 30px;
-    justify-content: center;
-    margin-left: 0px;
-    bottom: 0;
+    font-size: 2rem;
+    margin-left: 9%;
 `

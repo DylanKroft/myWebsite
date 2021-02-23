@@ -16,13 +16,13 @@ const Cards = ({title, pic, body, github, demo, explore, date}) => {
             {body}
             </Card.Text>
                 <ul>
-                    {github && <li>
+                    {github && <li className="item">
                         <Button className="btn" id="gH"><a href={github}><AiFillGithub/><span>&nbsp;</span>Github</a></Button>
                     </li>}
-                    {demo && <li>
+                    {demo && <li className="item">
                         <Button className="btn" id="demo"><a href={demo}><AiFillExperiment/><span>&nbsp;</span>Demo</a></Button>
                     </li>}
-                    {explore && <li>
+                    {explore && <li className="item">
                         <Button className="btn" id="explr"> <AiFillRocket/><span>&nbsp;</span>Explore</Button>
                     </li>}
                 </ul>

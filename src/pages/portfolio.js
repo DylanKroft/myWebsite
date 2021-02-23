@@ -40,5 +40,5 @@ const Body = styled.div`
     padding-top: 40px;
     left: 0px;
     min-height: 100vh;
-    padding-bottom: calc(40px + 10vh);
+    padding-bottom: 60px;
 `

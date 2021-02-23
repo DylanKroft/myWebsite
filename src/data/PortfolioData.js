@@ -5,7 +5,7 @@ export const portfolioData = [
         pic: "thissite.png",
         body: "Created from the Gatsby starter default—that's gotta count for something, right?",
         github: "https://github.com/DylanKroft/myWebsite",
-        demo: "https://dylank.netlify.app"
+        demo: "https://dylankroft.netlify.app"
     },
 
     {
