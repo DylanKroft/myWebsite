@@ -1,0 +1,11 @@
+.logo {
+    transform: scale(0.26);
+    transition: all ease 3000ms;
+    position: absolute;
+    top: -7px;
+    left: 0px;
+}
+
+.logo:hover{
+    filter: invert(38%) sepia(83%) saturate(2593%) hue-rotate(331deg) brightness(106%) contrast(94%);
+}

@@ -1,3 +1,20 @@
-ul {
-    color: black !important;
-}
+ul{
+    list-style-type:none;
+    padding-top: -10px;
+  
+  }
+  ul li{
+    display: list-item;
+    color:white;
+    margin: 0 !important;
+    padding: 0px 20px 20px 0px;
+  }
+
+  .icons {
+      fill:#676b7e;
+      transition: all ease 3000ms;
+  }
+
+  .icons:hover {
+    filter: invert(38%) sepia(83%) saturate(2593%) hue-rotate(331deg) brightness(106%) contrast(94%);
+  }

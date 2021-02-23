@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { menuData } from "../data/MenuData"
 import Button from "./Button"
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
+import "./Header.css"
 
 const useMouse = () => {
     const [mousePosition, setPosition] = useState({x : null, y : null});
@@ -31,6 +32,7 @@ const Header = ({onAdd, isOpen, fluid}) => {
 
     return (
         <Nav showTop={showTop} fluid={fluid}>
+            <Link to="/" className="logo"><img src="logo.svg" className="logo"/></Link>
 
         { useScrollPosition(({ prevPos, currPos }) => {
             if ((Math.abs(currPos.y) > (vhToPixels(100)  - 85)) && fluid) {

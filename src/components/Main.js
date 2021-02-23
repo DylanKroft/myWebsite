@@ -55,6 +55,7 @@ const Main = () => {
                 </ContainerContent>  
             </Container>
             <Container2>
+                <h3 className="sub">Recent Projects</h3>
             <Footer />
             </Container2>
         </div>
@@ -127,6 +128,7 @@ const MainH2 = styled.div`
 
 const Container2 = styled.div`
     width: 100%;
+    margin-top: 10px;
     height: 100vh;
     position: relative;
     display: flex;
