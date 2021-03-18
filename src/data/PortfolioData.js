@@ -30,9 +30,18 @@ export const portfolioData = [
         title: "NeoTimer",
         date: "June 2020",
         pic: "neotimer.png",
-        body: "A simple timer I made to try out neomorphism.",
+        body: "A simple timer I made to try out neumorphism.",
         github: "https://github.com/DylanKroft/neoTimer",
         demo: "https://neotimer.netlify.app/"
+    },
+
+    {
+        title: "Boeing 737 Max Design Disaster Case Study",
+        date: "May 2020",
+        pic: "boeing.png",
+        body: "A visual report into the Boeing 737 Max aircraft disasters detailing causes and potential solutions for avoiding them in the future. Made with Adobe Illustrator and Indesign.",
+        demo: "https://drive.google.com/file/d/1UYwlHEt5xAXFwO-kRyioTijPxeu8Migg/view?usp=sharing"
+
     },
 
     {
