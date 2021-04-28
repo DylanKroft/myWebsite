@@ -17,7 +17,7 @@ const contact = () => {
         <MainH1>
         <p>connect with me</p>
         </MainH1>
-        <ContactInfo><a href = "mailto: dylankroft@gmail.com"><span style={{color: "#676b7e", fontSize: "2rem", fontWeight: "400"}}>dylankroft.com</span></a>
+        <ContactInfo><a href = "mailto: dylankroft@gmail.com"><span style={{color: "#676b7e", fontSize: "2rem", fontWeight: "400"}}>dylankroft@gmail.com</span></a>
         </ContactInfo>
         <ConnectButtons/>
         </Main>
