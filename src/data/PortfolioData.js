@@ -3,7 +3,7 @@ export const portfolioData = [
         title: "Bamboo Task Tracker", 
         date: "March 2021",
         pic: "bamboo.png",
-        body: "Worked in a team of four to build a multi-user taask tracker for my first-ever hackathon. Users are able to compete against other users and send them 'wellbeing tasks' to complete. When logging in, please select 'Continue with Google'!",
+        body: "Worked in a team of four to build a multi-user task tracker for my first-ever hackathon. Users are able to compete against other users and send them 'wellbeing tasks' to complete. When logging in, please select 'Continue with Google'!",
         github: "https://github.com/DylanKroft/hackiethon-2021",
         demo: "https://teamreg.netlify.app"
     },
