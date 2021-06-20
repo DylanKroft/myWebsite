@@ -2,6 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 import { menuData } from "../data/MenuData"
 import {Link} from "gatsby"
+import PDF from '../DylanKroftCV.pdf'
 
 const Dropdown = () => {
     return (
@@ -14,6 +15,7 @@ const Dropdown = () => {
                     </NavLink>
                 </div>
             ))}
+            <NavLink><a href={PDF}>CV</a></NavLink>
             <Buffer></Buffer>
 
         </Ddown>

@@ -5,6 +5,7 @@ import { menuData } from "../data/MenuData"
 import Button from "./Button"
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import "./Header.css"
+import PDF from '../DylanKroftCV.pdf'
 
 const useMouse = () => {
     const [mousePosition, setPosition] = useState({x : null, y : null});
@@ -51,6 +52,8 @@ const Header = ({onAdd, isOpen, fluid}) => {
                             </Links>
                     </NavLink>
                 ))}
+                 <NavLink><a href={PDF}>CV</a></NavLink>
+
             </NavMenu>
         </Nav>    
     )
