@@ -143,7 +143,8 @@ const Links = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 1;
-    transition: opacity 3s;
+      color: white;
+
 
     :hover {
         background: linear-gradient(90deg, rgba(18,194,233,1) 0%, rgba(196,113,237,1) 100%);
