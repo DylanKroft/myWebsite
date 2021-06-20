@@ -52,7 +52,7 @@ const Header = ({onAdd, isOpen, fluid}) => {
                             </Links>
                     </NavLink>
                 ))}
-                 <NavLink><a href={PDF}>CV</a></NavLink>
+                <Links><NavLinka href={PDF}>CV</NavLinka></Links>
 
             </NavMenu>
         </Nav>    
@@ -92,6 +92,24 @@ const Nav = styled.nav`
         box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.7);
     `}
     `
+
+const NavLinka = styled.a`
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 1px; 
+    margin: 0rem 4rem 0rem 0rem;
+    user-select: none;
+
+    :hover {
+        background: linear-gradient(90deg, rgba(18,194,233,1) 0%, rgba(196,113,237,1) 100%);
+        -webkit-background-clip: text;
+         }
+
+`
+
 const NavLink = styled(Link)`
     color: #fff;
     display: flex;
