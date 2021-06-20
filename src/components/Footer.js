@@ -13,19 +13,19 @@ const Footer = () => {
         <IconContext.Provider value={{className: "icons"}}>
                 <ul>
                 <li>
-                    <Link to="https://github.com/DylanKroft">
+                    <a href="https://github.com/DylanKroft">
                     <RiGithubLine/>
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link to="https://www.linkedin.com/in/dylan-kroft/">
+                    <a href="https://www.linkedin.com/in/dylan-kroft/">
                     <RiLinkedinBoxLine/>
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link to="https://www.instagram.com/dylan.kroft/?hl=en">
+                    <a href="https://www.instagram.com/dylan.kroft/?hl=en">
                     <RiInstagramLine/>
-                    </Link> 
+                    </a> 
                 </li>
             </ul>
         </IconContext.Provider>

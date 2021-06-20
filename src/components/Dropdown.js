@@ -55,9 +55,6 @@ const NavLink = styled(Link)`
     height: 80px;
     background-color: #070912;
  
-
-
-
     :hover {
         background-color: #0D1224;
         text-decoration:none;

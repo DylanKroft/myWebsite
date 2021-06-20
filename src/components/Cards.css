@@ -1,100 +1,95 @@
 .card {
-    width: 100% !important;
-    border-radius: 0px !important;
-    text-align: left;
-    transition: all ease 500ms;
-    border: 1px solid lightgrey !important;
-    height: 100% !important;
+  width: 100% !important;
+  border-radius: 0px !important;
+  text-align: left;
+  transition: all ease 500ms;
+  border: 1px solid lightgrey !important;
+  height: 100% !important;
 }
 
 .card:hover {
-    border: 1px solid !important;
-    border-image: linear-gradient(45deg, rgb(18,194,233), rgb(196,113,237)) 1 !important;
-
+  border: 1px solid !important;
+  border-image: linear-gradient(45deg, rgb(18, 194, 233), rgb(196, 113, 237)) 1 !important;
 }
 
-.card-text{
-    color: #000000;
+.card-text {
+  color: #000000;
 }
 
 .cardBody {
-    padding-bottom: 50px !important;
-    position: relative;
+  padding-bottom: 50px !important;
+  position: relative;
 }
 
-.cardTitle{
-    color: #192346;
-    font-size: 1.25em !important;
-    padding: 20px;
-    padding-bottom: 0px;
-    margin: 0px !important;
+.cardTitle {
+  color: #192346;
+  font-size: 1.25em !important;
+  padding: 20px;
+  padding-bottom: 0px;
+  margin: 0px !important;
 }
 
 .cardSub {
-    color: #484b57;
-    padding-top: 10px;
-    padding-left: 20px;
-
+  color: #484b57;
+  padding-top: 10px;
+  padding-left: 20px;
 }
 
 .cardImg {
-    border-radius: 0px !important;
-    width: 100%;
-    height: 20vw;
-    object-fit: cover;
-    border-bottom: 1px solid lightgrey !important;
-
+  border-radius: 0px !important;
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+  border-bottom: 1px solid lightgrey !important;
 }
 
 .btn {
-    border-radius: 500px !important;
-    background-color: #192346 !important;
-    border: 0px !important;
-    display: flex !important;
-    align-items: center !important;
-    transition: all ease 200ms !important;
-    margin: 15px 0px 15px 0px;
-    
+  border-radius: 500px !important;
+  background-color: #192346 !important;
+  border: 0px !important;
+  display: flex !important;
+  align-items: center !important;
+  transition: all ease 200ms !important;
+  margin: 15px 0px 15px 0px;
 }
 
 #gH:hover {
-    background-color: #6f42c1 !important;
+  background-color: #6f42c1 !important;
 }
 
 #demo:hover {
-    background-color: #28a745 !important;
+  background-color: #28a745 !important;
 }
 
 #explr:hover {
-    background-color: #d73a49 !important;
+  background-color: #d73a49 !important;
 }
 
 ul > li {
-    display: inline-block;
-    zoom:1;
-    *display:inline;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
 }
 
 ul {
-    margin: 5px !important;
-    position: absolute !important;
-    bottom: 0 !important;
+  margin: 5px !important;
+  position: absolute !important;
+  bottom: 0 !important;
 }
 
 a {
-    text-decoration: none;
-    color: white !important;
-    display: flex !important;
-    align-items: center !important;
+  text-decoration: none;
+  color: white !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 a:hover {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 @media screen and (max-width: 768px) {
-    .cardImg {
-        height: 50vw;
-    }
+  .cardImg {
+    height: 50vw;
+  }
 }
-

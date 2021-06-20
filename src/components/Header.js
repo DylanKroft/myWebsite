@@ -69,6 +69,7 @@ const Nav = styled.nav`
     width: 100%;
     top: 0;
     z-index: 100;
+    user-select: none;
 
     ${({ showTop }) => showTop && `
         position: fixed;
@@ -96,6 +97,7 @@ const NavLink = styled(Link)`
     text-decoration: none;
     letter-spacing: 1px; 
     margin: 0rem 4rem 0rem 0rem;
+    user-select: none;
 
     :hover {
         text-decoration: none;
