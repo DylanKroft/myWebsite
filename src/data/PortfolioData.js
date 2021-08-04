@@ -1,5 +1,13 @@
 export const portfolioData = [
     {
+        title: "Morning | Personal Dashboard",
+        date: "July 2021",
+        pic: "morning.png",
+        body: "Web-based personal dashboard with a selection of small applets that can be used as a browser new tab replacement. Built with Firebase and React.",
+        github: "https://github.com/DylanKroft/now",
+        demo: "https://morning.dylankroft.com"
+    },
+    {
         title: "AP Warehouse E-Commerce Site",
         date: "May 2021",
         pic: "apwarehouse.png",

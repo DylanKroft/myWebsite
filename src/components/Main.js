@@ -47,7 +47,7 @@ const Main = () => {
                             transitionDuration="1250"
                         >
                             <MainH2 mouseX={x} mouseY={y}>
-                                <span className="subtitle">Currently studying computer science and design at the University of Sydney. 
+                                <span className="subtitle">Currently studying computer science and software development at the University of Sydney. 
                                 I love good design and building simple, intuitive, and elegant user experiences.
                                 </span>
                             </MainH2>
